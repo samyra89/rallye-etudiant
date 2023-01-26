@@ -6,106 +6,101 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Professionnaliser nos débutants mécaniciens</title>
 		<meta name="description" content="Un suivi de la profession de mécanicien et les compétences attendues. Un cursus scolaire renforcé par des stages en participant à des ateliers en mécanique auto.  Former nos jeunes dans des mises en situation pour acquérir de l’expérience professionnelle nécessaire.">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<link rel="stylesheet" href="public/css/normalize.css">
-		<link rel="stylesheet" href="public/css/style.css">
+		<script src="https://kit.fontawesome.com/9597cf5b3e.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="sass/css/main.css">
 	</head>
 		<body>
-			<header>
-				
-				<nav role="navigation">
-					<ul class="nav">
-						<li class="nav-item">
-							<a href="#" class="nav-icon"
-							aria-label="visit homepage"
-							aria-current="page">
-								<img src="public/pictures/pneu/pneu-s/pneu-sm.png" alt="logo de l'association Rallye Etudiant">
-								<span>Rallye Etudiant</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="#menu-toggle" class="hamburger">
-								<span></span>
-								<span>Menu</span>
-								<span></span>
-							</a>
-						</li>
-						<ul id="menu-toggle">
-							<li>
-								<a href="#"
-								aria-current="page">Accueil</a>
+			<div class="container">
+				<header class="header">
+					<div class="header-presentation">
+						<h1 class="header-title">Professionnaliser nos débutants mécaniciens</h1>
+						<p class="header-description">A la fin de ses études, le mécano doit avoir un minimum de compétences professionnelles
+							 pour faciliter sa rentrée dans le monde du travail.</p>
+					</div>
+					<nav role="navigation" class="header-nav">
+						<a href="#" class="header-home"
+						aria-label="visit homepage"
+						aria-current="current page"
+						>
+							<img class="header-logo"
+							src="public/pictures/pneu/pneu-s/pneu-sm.png"
+							alt="logo de l'association Rallye Etudiant"
+							>
+							<span class="header-name">Rallye Etudiant</span>
+						</a>						
+						<label class="header-hamburger" for="burger" aria aria-label="menu-toggle">
+							<input type="checkbox" id="burger">
+							<span class="header-textburger">Menu</span>			
+						</label>
+						<ul class="header-list">
+							<li class="header-item">
+								<a class="header-link"
+								href="#"
+								aria-current="current page">
+								Accueil
+								</a>
 							</li>
-							<li>
-								<a href="#">Evénements</a>
+							<li class="header-item">
+								<a class="header-link"
+								href="#">
+								Evénements
+								</a>
 							</li>
 						</ul>
-					</ul>
-				</nav>
-			</header>
-			<main role="main">
-				<article>
-					<header>
-						<h1>Professionnaliser nos débutants mécaniciens</h1>
-						<p>A la fin de ses études, le mécano doit avoir un minimum de compétences professionnelles pour faciliter sa rentrée dans le monde du travail.</p>
-					</header>
-					<section>
+					</nav>
+
+				</header>			
+				<main role="main">
+					<article>
 						<h2>Un suivi de la profession de mécanicien pour déterminer les attentes.</h2>
-						<div>
-							<p><i class="fa-solid fa-arrow-right-arrow-left"></i></p>
-						</div>
-						<h3>Une formation en adéquation avec les professionnels de l’automobile</h3>
-						
-						<p>Afin de suivre l’évolution de la filière automobile, notre association Rallye Etudiant organise des tables rondes avec les entreprises qui recrutent des jeunes mécanos. Les besoins sont répertoriés et en sont la base pour former les jeunes.</p>
-						<div>
-							<p><i class="fa-solid fa-lightbulb"></i></p>
-						</div>
-						<h3>L’expérience professionnelle, une exigence.</h3>
-						<p>Les compétences récurrentes recherchées sont le savoir-faire et le savoir-être sont les deux points déterminants. C’est en pratiquant que l’on devient expérimenté.</p>
-					</section>
-					<section>					
-						<h2>Se professionnaliser par la pratique</h2>
-						<div>
-							<p><i class="fa-solid fa-screwdriver-wrench"></i></p>
-						</div>
-						<h3>Des stages pour se former.</h3>
-						<p>Nous organisons des ateliers « maintenance automobile » pour nos stagiaires. Encadrés par des bénévoles du métier, ils développent l’habilité manuelle, de la rigueur et rapidité : le savoir-faire.</p>
-						<div>
-							<p><i class="fa-solid fa-flag-checkered"></i></p>
-						</div>
-						<h3>Des challenges pour l’efficacité.</h3>
-						<p>La mise en situation est idéale pour acquérir une aptitude professionnelle. Pour cela, nous organisons des rallyes privés. Nos mécaniciens-stagiaires devront développer leur capacité à s’adapter, à gérer leur stress et à travailler en équipe : le savoir-être. Ils pourront aussi y rencontrer nos donateurs.</p>
-					</section>
-				</article>				
-			</main>
-			<aside>
-				<h4>Je contribue à la vie de l'association</h4>
-				<ul>
-					<li>
-						<a href="#">je participe aux tables rondes</a>
-					</li>
-					<li>
-						<a href="#">Je m'inscris en tant que bénévole ou stagiaire</a>
-					</li>
-					<li>
-						<a href="#">je deviens donateur</a>
-					</li>
-				</ul>
-			</aside>
-			<footer>				
-				<p>A propos</p>
-				<ul>
-					<li>source icons: https://fontawesome.com/</li>			
-					<li>source photos: https://unsplash.com</li>
+						<section>							
+							<h3><span class="fa-solid fa-arrow-right-arrow-left"></span>Une formation en adéquation avec les professionnels de l’automobile</h3>							
+							<p>Afin de suivre l’évolution de la filière automobile, notre association Rallye Etudiant organise des tables rondes avec les entreprises qui recrutent des jeunes mécanos. Les besoins sont répertoriés et en sont la base pour former les jeunes.</p>
+						</section>
+						<section>
+							<h3><span class="fa-solid fa-lightbulb"></span>L’expérience professionnelle, une exigence.</h3>
+							<p>Les compétences récurrentes recherchées sont le savoir-faire et le savoir-être sont les deux points déterminants. C’est en pratiquant que l’on devient expérimenté.</p>
+						</section>
+					</article>
+					<article>
+						<h2>Se professionnaliser par la pratique</h2>						
+						<section>					
+							<h3><span class="fa-solid fa-screwdriver-wrench"></span>Des stages pour se former.</h3>
+							<p>Nous organisons des ateliers « maintenance automobile » pour nos stagiaires. Encadrés par des bénévoles du métier, ils développent l’habilité manuelle, de la rigueur et rapidité : le savoir-faire.</p>
+						</section>
+						<section>
+							<h3><span class="fa-solid fa-flag-checkered"></span>Des challenges pour l’efficacité.</h3>
+							<p>La mise en situation est idéale pour acquérir une aptitude professionnelle. Pour cela, nous organisons des rallyes privés. Nos mécaniciens-stagiaires devront développer leur capacité à s’adapter, à gérer leur stress et à travailler en équipe : le savoir-être. Ils pourront aussi y rencontrer nos donateurs.</p>
+							</section>			
+					</article>
+				</main>
+				<aside role="aside">
+					<h4>Je contribue à la vie de l'association</h4>
 					<ul>
-						<li>logo: Photo de serjan midili sur Unsplash</li>
+						<li>
+							<a href="#">je participe aux tables rondes</a>
+						</li>
+						<li>
+							<a href="#">Je m'inscris en tant que bénévole ou stagiaire</a>
+						</li>
+						<li>
+							<a href="#">je deviens donateur</a>
+						</li>
 					</ul>
-				</ul>
-				<a href="#">CGU</a>
-				<p>Association fictive dans le cadre de ma formation "développeur Web et Web mobile" chez Studi</p>
-				<p>&copy Samyra89 2023</p>
-			</footer>
+				</aside>
+				<footer role="footer">				
+					<p>A propos</p>
+					<ul>
+						<li>source icons: https://fontawesome.com/</li>			
+						<li>source photos: https://unsplash.com</li>
+						<ul>
+							<li>logo: Photo de serjan midili sur Unsplash</li>
+						</ul>
+					</ul>
+					<a href="#">CGU</a>
+					<p>Association fictive dans le cadre de ma formation "développeur Web et Web mobile" chez Studi</p>
+					<p>&copy Samyra89 2023</p>
+				</footer>
+			</div>
 		</body>
 </html>
