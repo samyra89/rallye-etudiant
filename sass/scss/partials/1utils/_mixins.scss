@@ -1,0 +1,13 @@
+//add font with weight
+@mixin font($name, $weight) {
+  font-family: $name;
+  font-weight: $weight;
+}
+
+//transform burger to x
+@mixin transform-burger-x ($rotate: 45deg, $scale: 0.5){
+  top: 50%;
+  bottom: 50%;
+  rotate: $rotate;
+  scale: $scale
+}

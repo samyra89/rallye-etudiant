@@ -1,0 +1,91 @@
+@use '../1utils' as *;
+@use '../2vendors' as *;
+@use '../3bases/' as *;
+
+main {
+  position: relative;
+
+  margin: 2rem auto;
+
+  
+}
+
+article {
+  
+  margin: 2rem 0 2rem 0;
+  //margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: darken($grey, 0.5);
+  border: 3px solid $blue;
+  border-radius: 10px;
+}
+
+article h2 {
+  font-size: calc($fs-s * 1.2);
+  font-weight: 900;
+  text-align: center;
+  
+  padding: 2rem 0 1rem 0;
+}
+.section-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+article section {
+  position: relative;
+  max-width: 450px;
+  border: 0.4rem solid darken($red, 1);
+  border-radius: 0.5rem;
+  margin: 3rem 2rem 2rem 2rem;
+  padding: 3rem 1rem 1rem 1rem;
+}
+ section h3 {
+  
+  //margin: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  font-size: $fs-s * 1.1;
+  font-weight: 700;
+  text-align: center;
+ }
+
+ section span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% -50%;
+
+  padding: 1rem;
+
+  border-radius: 0.5rem;
+
+  font-size: $fs-s * 3;
+  color: darken($grey, 1);
+  
+
+  background-color: darken($red, 1);
+  
+  
+ }
+
+
+
+
+@media screen and (#{$screen-width-l}) {
+  main {
+    width: 85%;
+
+  }
+    
+}
+
+@media screen and (#{$screen-width-xl}) {
+  main {
+    width: 70%;
+    min-width: 1113.5px;
+    
+  }
+
+    
+}

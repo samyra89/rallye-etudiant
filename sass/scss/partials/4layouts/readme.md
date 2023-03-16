@@ -1,0 +1,1 @@
+mise en page des différentes sections (header, footer, sidebar, forms, nav, grid)
