@@ -32,27 +32,32 @@ aside li {
   position: relative;
   width: 100%;
   padding: 1rem;
-  border:  1px red solid;
+  border:  3px black solid;
+  
   border-radius: 10px;
   margin: 1rem;
   &:nth-child(1)::before {
     position: absolute;
     top: 0;
     left: 0;
-    color: $red;
-    width: 100%;
+    color: $black;
+    background-color: $orange;
+    width: 25%;
     height: 100%;
     z-index: -10;
-    
-
-    
-    font-size: 100%;
+        
+    font-size: 2rem;
     font-family: "Font Awesome 6 Free";
     content: "\f0ec";
-    display: inline-block;
-    padding-right: 3px;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //display: inline-block;
+    //padding-right: 3px;
+    //vertical-align: middle;
     font-weight: 900;
+    //box-shadow: inset -0.2 0rem $black;
+    
   }
   &:nth-child(2)::before {
     font-family: "Font Awesome 6 Free";
