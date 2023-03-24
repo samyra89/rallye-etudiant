@@ -1,0 +1,47 @@
+@use '../1utils' as *;
+@use '../2vendors' as *;
+
+html {
+  @include font($roboto, 400);
+  font-size: $fs-xs;
+  line-height: 1.5;
+}
+body {
+  background-color: lighten($grey, 8%);
+}
+
+
+
+
+.header-presentation,
+
+aside,
+footer {
+  padding: 0 1rem;
+}
+
+
+@media screen and (#{$screen-width-s}) {
+  html {
+    font-size: $fs-s; 
+  }
+}
+
+@media screen and (#{$screen-width-m}) {
+  html {
+    font-size: $fs-m;
+  }
+}
+
+
+@media screen and (#{$screen-width-l}) {
+  html {
+    font-size: $fs-l;
+  }
+}
+
+@media screen and (#{$screen-width-xl}) {
+  html {
+    font-size: $fs-xl;
+  }
+}

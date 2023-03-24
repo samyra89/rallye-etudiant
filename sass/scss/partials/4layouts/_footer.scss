@@ -1,0 +1,57 @@
+@use '../1utils' as *;
+@use '../2vendors' as *;
+@use '../3bases/' as *;
+
+footer {
+  background-color: $orange;
+  box-shadow: inset 0 0.3rem $black;
+  font-size: 1.2rem;
+  font-weight: 900;
+  
+  
+
+}
+.footer-details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+      
+}
+.about {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  width: 70%;
+  min-width: 200px;
+  p {
+  text-decoration: underline;
+  }
+  ul {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+}
+.termsOfUse {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  width: 30%;
+  text-decoration: underline;
+}
+.copyright {
+  margin-top: 2rem;
+  width: 100%;
+  
+  p {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  p:nth-child(2) {
+    font-weight: 900;
+  }
+}
