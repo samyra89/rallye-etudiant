@@ -1,8 +1,13 @@
-@use '../fontawesome/scss/fontawesome.scss';
-@use '../fontawesome/scss/solid.scss';
-h1::before {
-  @extend .fas;
-  @extend .fa-solid;
-  @extend .fa-arrow-right-arrow-left;
-  @extend .fa-1x
-}
+@use "../partials/1utils" as *;
+
+@use "../partials/2vendors" as *;
+
+@use "../partials/3bases" as *;
+
+@use "../partials/4layouts" as *;
+
+@use "../partials/5components" as *;
+
+@use "../partials/6pages" as *;
+
+@use "../partials/7themes" as *

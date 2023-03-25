@@ -1,0 +1,1 @@
+reset perso, typo, styles standard (html, body)
