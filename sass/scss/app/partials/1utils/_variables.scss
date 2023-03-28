@@ -1,3 +1,4 @@
+@use 'sass:math';
 // font
 $roboto: 'Roboto', sans-serif;
 $poppins: 'Poppins', sans-serif;
@@ -5,16 +6,46 @@ $times: inherit;
 
 // font-size en px
 $fs: 10px;
-$fs-xs: calc($fs * 1.2);
-$fs-s: calc($fs * 1.3);
-$fs-m: calc($fs * 1.4);
-$fs-l: calc($fs * 1.5);
-$fs-xl: calc($fs * 1.6);
+$fs-xs: 1.2rem;
+
+
+//font nav bar
+$nav-fs: 1.2rem;
+$nav-ff: $roboto;
+$nav-fw: 900;
+$nav-inset: -0.3rem;
+$nav-pad-bottom: $nav-inset * -1;
+$nav-pad-horizontal: 0.5rem;
+
+// home 
+$home-pad-top: 0.3rem;
+$home-pad-bottom: 0; 
+$home-pad-horizontal: 0;
+
+//logo
+$logo-width: $nav-fs;
+$logo-height: $logo-width;
+
+//name
+$name-pad-left: 0.3rem;
+
+//hamburger
+$line-height-text: 1.5 * $nav-fs;
+$burger-text: math.div($nav-fs, 1.9);
+$burger-pad-top: $home-pad-top;
+$burger-pad-bottom: $home-pad-bottom;
+$burger-pad-horizontal:$home-pad-horizontal;
+
+//hamburger before-after
+$hamburger-height: 0.3rem;
+$hamburger-radius: 1rem;
+$hamburger-before-top: calc(50% + $burger-pad-top - $burger-text - 0.3rem);
+$hamburger-after-bottom: calc(50% - $burger-text - 0.3rem);
+
+//textburger
+$texburger-pad-horizontal: 0.2rem;
+
 
 // screen
 $screen-width-xs: 'min-width:200px';
-$screen-width-s: 'min-width:270px';
-$screen-width-m: 'min-width:670px'; 
-$screen-width-l: 'min-width:1000px';
-$screen-width-xl: 'min-width:1330px'; 
 

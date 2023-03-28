@@ -1,0 +1,10 @@
+@use '../../1utils/index' as *;
+@use '../../2vendors/index' as *;
+@use '../../3bases/index' as *;
+
+.header {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+

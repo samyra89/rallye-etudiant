@@ -1,0 +1,90 @@
+@use '../../1utils/index' as *;
+@use '../../2vendors/index' as *;
+@use '../../3bases/index' as *;
+//@use '../4layouts/index' as *;
+
+.header {
+  &-nav {
+    position: relative;
+    display: flex;   
+    justify-content: space-between;    
+    align-items: center;
+    padding: 0 $nav-pad-horizontal $nav-pad-bottom $nav-pad-horizontal;
+    //padding-bottom: $nav-pad-bottom;
+    background-color: $orange;
+    box-shadow: inset 0 $nav-inset $black;
+    @include font($nav-ff, $nav-fw);
+    font-size: $nav-fs;
+  }
+  &-home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $home-pad-top $home-pad-horizontal $home-pad-bottom $home-pad-horizontal;
+  }
+  &-logo {    
+    @include rectangle($logo-width, $logo-height);
+  }
+  &-name {
+    padding-left: $name-pad-left;
+    white-space: nowrap;
+  }  
+}
+
+#burger {
+  position: absolute;
+  bottom: 100%;
+  right: 100%;  
+}
+
+.header {
+  &-hamburger {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: $line-height-text;
+    padding: $burger-pad-top $burger-pad-horizontal $burger-pad-bottom $burger-pad-horizontal;
+    font-size: $burger-text;
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      top: $hamburger-before-top;
+      left: 0;
+      width: 100%;
+      height: $hamburger-height;
+      border-radius: $hamburger-radius;
+      background-color: $black;
+    }
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+      bottom: $hamburger-after-bottom;
+      left: 0;
+      width: 100%;
+      height: $hamburger-height;
+      border-radius: $hamburger-radius;
+      background-color: $black;
+    } 
+  }
+  &-textburger {
+    padding-left: $texburger-pad-horizontal;
+    padding-right: $texburger-pad-horizontal;    
+    text-transform: uppercase;
+      
+  }
+  &-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: aqua;
+  }
+  &-item {
+    color: blue;
+  }
+  &-link {
+    color: blue;
+  }
+}

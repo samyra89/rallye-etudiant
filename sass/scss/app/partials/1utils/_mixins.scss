@@ -4,6 +4,11 @@
   font-weight: $weight;
 }
 
+@mixin rectangle($width, $height) {
+  width: $width;
+  height: $height;
+}
+
 //transform burger to x
 @mixin transform-burger-x ($rotate: 45deg, $scale: 0.5){
   top: 50%;

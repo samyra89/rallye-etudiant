@@ -1,4 +1,7 @@
-@forward 'header';
+@forward 'header/header-container';
+@forward 'header/header-navbar';
+@forward 'header/header-presentation';
+
 @forward 'main';
 @forward 'aside';
 @forward 'footer';

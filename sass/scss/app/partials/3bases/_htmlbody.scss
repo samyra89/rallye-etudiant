@@ -1,0 +1,14 @@
+@use '../1utils' as *;
+@use '../2vendors' as *;
+
+
+html {
+  font-size: $fs;
+  @include font($roboto, 700);
+  line-height: 1.5;
+}
+
+body {
+  line-height: 1.5;
+  min-width: 130px;  
+}
