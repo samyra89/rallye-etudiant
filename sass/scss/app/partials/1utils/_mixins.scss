@@ -9,10 +9,42 @@
   height: $height;
 }
 
+@mixin circle($width, $height){
+  @include rectangle($width, $height);
+  border-radius: 50%;
+}
+
 //transform burger to x
 @mixin transform-burger-x ($rotate: 45deg, $scale: 0.5){
   top: 50%;
   bottom: 50%;
   rotate: $rotate;
   scale: $scale
+}
+
+// liens
+@mixin link-action (
+  $property, 
+  $link: green, 
+  $visited: blue,
+  $hover: purple, 
+  $active: orange
+  ) 
+  {
+  &:link {
+    #{$property}: $link;
+    transition: all 0.3s ease-in-out;
+  }
+  &:visited {
+    #{$property}: $visited;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    #{$property}: $hover ;
+    transition: all 0.3s ease-in-out;
+  }
+  &:active {
+    #{$property}: $active;
+    transition: all 0.3s ease-in-out;
+  }
 }

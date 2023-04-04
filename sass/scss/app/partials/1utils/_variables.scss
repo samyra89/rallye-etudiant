@@ -16,6 +16,7 @@ $nav-fw: 900;
 $nav-inset: -0.3rem;
 $nav-pad-bottom: $nav-inset * -1;
 $nav-pad-horizontal: 0.5rem;
+$nav-height: 2.4rem;
 
 // home 
 $home-pad-top: 0.3rem;
@@ -30,9 +31,16 @@ $logo-height: $logo-width;
 $name-pad-left: 0.3rem;
 
 //hamburger
-$line-height-text: 1.5 * $nav-fs;
+/*----hauteur ligne home----*/
+$home-line-height-text: 1.5 * $nav-fs;
+/*--------------------------*/
+/*-----textburger------*/
+$texburger-pad-horizontal: 0.2rem;
+/*---------------------*/
+$burger-height: $home-line-height-text + 0.3rem;
+$burger-width: $burger-height + $texburger-pad-horizontal;
 $burger-text: math.div($nav-fs, 1.9);
-$burger-pad-top: $home-pad-top;
+$burger-pad-top: $home-pad-top ;
 $burger-pad-bottom: $home-pad-bottom;
 $burger-pad-horizontal:$home-pad-horizontal;
 
@@ -42,8 +50,9 @@ $hamburger-radius: 1rem;
 $hamburger-before-top: calc(50% + $burger-pad-top - $burger-text - 0.3rem);
 $hamburger-after-bottom: calc(50% - $burger-text - 0.3rem);
 
-//textburger
-$texburger-pad-horizontal: 0.2rem;
+//list
+$list-width: $fs-xs * 12;
+$list-heigth: $list-width;
 
 
 // screen

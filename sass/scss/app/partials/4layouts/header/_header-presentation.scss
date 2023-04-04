@@ -1,4 +1,9 @@
 @use '../../1utils/index' as *;
 @use '../../2vendors/index' as *;
 @use '../../3bases/index' as *;
-//@use '../4layouts/' as *;
+
+.header {
+  &-presentation {
+    position: relative;
+  }
+}
