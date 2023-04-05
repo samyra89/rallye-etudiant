@@ -3,21 +3,44 @@
 @use '../../3bases/index' as *;
 
 .header {
-  &-list {    
+  &-list-wrapper {
     position: absolute;
-    top: calc(50vh + 50%);    
-    left: -100%;//left: 0;
-    translate: 0 -50%;
+    top: $nav-height;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - ($nav-height));
+    min-height: $list-wrapper-min-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: linear;
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $orange;
+      filter: opacity(90%);
+      border-radius: 0 50% 50% 0;      
+    }
+  }
+
+  &-list {
+    position: relative;
     rotate: 320deg;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0;   
     @include circle($list-width, $list-heigth);
     background: radial-gradient(ellipse at center, $grey 0%, darken($color: $grey, $amount: 10%) 50%, $black 70%, $black 100%);
-    border: 2rem groove rgba($black, 1.6) ;    
-    font-size: $fs-xs;   
+    border: 2rem groove rgba($black, 1.6);
+    font-size: $fs-xs;
     transition-property: all;
     transition-duration: 0.4s;
     transition-timing-function: linear;
@@ -30,8 +53,9 @@
 
   &-item {
     display: flex;
-    justify-content: center;  
-    line-height: 0.5rem;   
+    justify-content: center;
+    line-height: 0.5rem;
+
     &:nth-child(2) {
       margin: 0.5rem 0;
       z-index: 1000;
@@ -40,69 +64,37 @@
 
   &-link {
     display: block;
-    text-align: center;    
-    font-size: 1.1rem;
     padding: 0.6rem 1rem;
+    text-align: center;
+    font-size: 1.1rem;
     background-color: $grey;
-    border-radius: 2rem 1.2rem;  
-    color: darken($color: $grey, $amount:60%);
+    border-radius: 2rem 1.2rem;
+    color: darken($color: $grey, $amount: 60%);
     text-shadow: 0.2rem -0.2rem 0.5rem darken($grey, 50%);
     box-shadow: inset 1rem -1rem 1rem darken($grey, 20%);
     border: 0.3rem groove rgba($color: darken($grey, 70%), $alpha: 0.4);
     transition: all 0.3s ease-in-out;
-    @include link-action(
-      $property: border-color, 
+    @include link-action($property: border-color,
       $link: rgba($color: darken($grey, 70%), $alpha: 0.4),
       $visited: $grey,
       $hover: darken($orange, 15%),
       $active: darken($grey, 70%)
     )
-  }  
+  }
 }
 
-#burger {
-  &::before {
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    left: 100%;   
-    content: '';
-    width: 0;
-    height: calc(100vh - ($nav-height));
-    border-radius:  0 50% 50% 0;
-    background-color: $orange;
-    filter: opacity(90%);
+#burger:checked {
+  &~.header-list-wrapper {
+    left: 0;
     transition-property: all;
     transition-duration: 0.4s;
     transition-timing-function: linear;
-    @media (orientation: landscape) {
-      transition-duration: 0.45s;
-    } 
-  }
-  &:checked::before {  
-    content: '';
-    width: 100vw;
-    height: calc(100vh - ($nav-height));    
-    transition-property: all;
-    transition-duration: 0.4s;
-    transition-timing-function: linear;
-    @media (orientation: landscape){
-      transition-duration: 0.6s;
-    }
-  }
-  &:checked ~ .header-list {
-    position: absolute;
-    top: calc(50vh + 50%);
-    left: 50%;
-    translate: -50% -50%;
-    rotate: 360deg;
-    transition-property: all;
-    transition-duration: 0.4s;
-    transition-timing-function: linear;
-    @media (orientation: landscape) { 
-      left: 100%;
-      translate: calc(-100% - 10px) -50%;
-      transition-duration: 0.6s;
+
+    & .header-list {
+      rotate: 360deg;
+      transition-property: all;
+      transition-duration: 0.4s;
+      transition-timing-function: linear;
     }
   }
 }
