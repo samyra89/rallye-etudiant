@@ -8,21 +8,23 @@
     top: $nav-height;
     left: -100%;
     @extend %flex-center-center;
-    width: 100%;
-    height: calc(100vh - ($nav-height));
+    @include rectangle(100%, calc(100vh - ($nav-height)));
     min-height: $list-wrapper-min-height;
-    transition-property: all;
-    transition-duration: 0.4s;
-    transition-timing-function: linear;
+    transition: all 0.4s linear;
+    background: rgba($black, 1);
+    background: linear-gradient(0deg, $black-rgba 0%, $grey-rgba 60%);
 
     &:before {
       @extend %before-after;
       top: 0;
       left: 0;
-      @include rectangle(100%, 100%);
-      border-radius: 0 50% 50% 0;      
-      background-color: $orange;
+      @include rectangle(100%, 70%);
+      border-radius: 0 40% 30% 0;
+      background: $orange;
+      background: linear-gradient(350deg, darken($orange, 30%) 0%, $orange 54%);
       filter: opacity(90%);
+      border-bottom: 0.5rem solid darken($orange, 25%);
+      border-right: 0.2rem solid darken($orange, 20%);
     }
   }
 
@@ -32,10 +34,12 @@
     @extend %flex-center-center;
     flex-direction: column;
     @include circle($list-width, $list-heigth);
+
     background: radial-gradient(ellipse at center, $grey 0%, darken($color: $grey, $amount: 10%) 50%, $black 70%, $black 100%);
     border: 2rem groove $black;
     font-size: $fs-xs;
     transition: all 0.4s linear;
+
     @media (orientation: landscape) {
       scale: 0.8;
       rotate: 300deg;
@@ -57,13 +61,11 @@
   &-link {
     display: block;
     padding: 0.6rem 1rem;
-    @include link-as-button(
-      $grey,
+    @include link-as-button($grey,
       darken($grey, 20%),
       rgba($color: darken($grey, 70%), $alpha: 0.4),
       darken($color: $grey, $amount: 60%),
-      darken($grey, 50%)
-    );
+      darken($grey, 50%));
     font-size: 1.1rem;
     text-align: center;
     transition: all 0.3s ease-in-out;
@@ -71,8 +73,7 @@
       $link: rgba($color: darken($grey, 70%), $alpha: 0.4),
       $visited: $grey,
       $hover: darken($orange, 15%),
-      $active: darken($grey, 70%)
-    )
+      $active: darken($grey, 70%))
   }
 }
 
@@ -80,6 +81,7 @@
   &~.header-list-wrapper {
     left: 0;
     transition: all 0.4s linear;
+
     & .header-list {
       rotate: 360deg;
       transition: all 0.4s linear;
