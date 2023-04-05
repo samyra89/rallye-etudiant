@@ -7,43 +7,35 @@
     position: absolute;
     top: $nav-height;
     left: -100%;
+    @extend %flex-center-center;
     width: 100%;
     height: calc(100vh - ($nav-height));
     min-height: $list-wrapper-min-height;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition-property: all;
     transition-duration: 0.4s;
     transition-timing-function: linear;
 
     &:before {
-      position: absolute;
-      content: "";
+      @extend %before-after;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      @include rectangle(100%, 100%);
+      border-radius: 0 50% 50% 0;      
       background-color: $orange;
       filter: opacity(90%);
-      border-radius: 0 50% 50% 0;      
     }
   }
 
   &-list {
     position: relative;
     rotate: 320deg;
-    display: flex;
+    @extend %flex-center-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     @include circle($list-width, $list-heigth);
     background: radial-gradient(ellipse at center, $grey 0%, darken($color: $grey, $amount: 10%) 50%, $black 70%, $black 100%);
-    border: 2rem groove rgba($black, 1.6);
+    border: 2rem groove $black;
     font-size: $fs-xs;
-    transition-property: all;
-    transition-duration: 0.4s;
-    transition-timing-function: linear;
+    transition: all 0.4s linear;
     @media (orientation: landscape) {
       scale: 0.8;
       rotate: 300deg;
@@ -65,14 +57,15 @@
   &-link {
     display: block;
     padding: 0.6rem 1rem;
-    text-align: center;
+    @include link-as-button(
+      $grey,
+      darken($grey, 20%),
+      rgba($color: darken($grey, 70%), $alpha: 0.4),
+      darken($color: $grey, $amount: 60%),
+      darken($grey, 50%)
+    );
     font-size: 1.1rem;
-    background-color: $grey;
-    border-radius: 2rem 1.2rem;
-    color: darken($color: $grey, $amount: 60%);
-    text-shadow: 0.2rem -0.2rem 0.5rem darken($grey, 50%);
-    box-shadow: inset 1rem -1rem 1rem darken($grey, 20%);
-    border: 0.3rem groove rgba($color: darken($grey, 70%), $alpha: 0.4);
+    text-align: center;
     transition: all 0.3s ease-in-out;
     @include link-action($property: border-color,
       $link: rgba($color: darken($grey, 70%), $alpha: 0.4),
@@ -86,15 +79,10 @@
 #burger:checked {
   &~.header-list-wrapper {
     left: 0;
-    transition-property: all;
-    transition-duration: 0.4s;
-    transition-timing-function: linear;
-
+    transition: all 0.4s linear;
     & .header-list {
       rotate: 360deg;
-      transition-property: all;
-      transition-duration: 0.4s;
-      transition-timing-function: linear;
+      transition: all 0.4s linear;
     }
   }
 }

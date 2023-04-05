@@ -6,19 +6,15 @@
 .header {
   &-nav {
     position: relative;
-    display: flex;   
-    justify-content: space-between;    
-    align-items: center;
-    padding: 0 $nav-pad-horizontal $nav-pad-bottom $nav-pad-horizontal;
+    @extend %flex-spabet-center;
+    padding: $nav-pad-top $nav-pad-horizontal $nav-pad-bottom $nav-pad-horizontal;
     background-color: $orange;
     box-shadow: inset 0 $nav-inset $black;
     @include font($nav-ff, $nav-fw);
     font-size: $nav-fs;
   }
   &-home{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @extend %flex-spabet-center;
     padding: $home-pad-top $home-pad-horizontal $home-pad-bottom $home-pad-horizontal;
   }
   &-logo {    
@@ -41,32 +37,21 @@
 .header {
   &-hamburger {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width:  $burger-width;
-    height:  $burger-height;
+    @extend %flex-center-center;
+    @include rectangle($burger-width, $burger-height);
     line-height: 1rem;
     &::before {
-      position: absolute;
-      display: block;
-      content: '';
+      @extend %before-after;
       top: $hamburger-before-top;
       left: 0;
-      width: 100%;
-      height: $hamburger-height;
-      border-radius: $hamburger-radius;
+      @include roundedrectangle(100%, $hamburger-height, $hamburger-radius);
       background-color: $black;
     }
     &:after {
-      position: absolute;
-      display: block;
-      content: '';
+      @extend %before-after;
       bottom: $hamburger-after-bottom;
       left: 0;
-      width: 100%;
-      height: $hamburger-height;
-      border-radius: $hamburger-radius;
+      @include roundedrectangle(100%, $hamburger-height, $hamburger-radius);
       background-color: $black;
     } 
   }
@@ -85,7 +70,7 @@
     transition: all 0.3s ease-in-out
   }
   &:checked + .header-hamburger::after {
-    @include transform-burger-x ($rotate: 45deg); 
+    @include transform-burger-x; 
     transition: all 0.3s ease-in-out
   }
   &:checked + .header-hamburger > .header-textburger {

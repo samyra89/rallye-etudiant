@@ -9,13 +9,21 @@
   height: $height;
 }
 
-@mixin circle($width, $height){
+@mixin roundedrectangle($width, $height, $radius) {
+  @include rectangle($width, $height);
+  border-radius: $radius;
+}
+
+
+
+@mixin circle($width, $height) {
   @include rectangle($width, $height);
   border-radius: 50%;
 }
 
+
 //transform burger to x
-@mixin transform-burger-x ($rotate: 45deg, $scale: 0.5){
+@mixin transform-burger-x ($rotate: 45deg, $scale: 0.5) {
   top: 50%;
   bottom: 50%;
   rotate: $rotate;
@@ -23,28 +31,44 @@
 }
 
 // liens
-@mixin link-action (
-  $property, 
-  $link: green, 
+@mixin link-action ($property,
+  $link: green,
   $visited: blue,
-  $hover: purple, 
-  $active: orange
-  ) 
-  {
+  $hover: purple,
+  $active: orange) {
   &:link {
     #{$property}: $link;
     transition: all 0.3s ease-in-out;
   }
+
   &:visited {
     #{$property}: $visited;
     transition: all 0.3s ease-in-out;
   }
+
   &:hover {
     #{$property}: $hover ;
     transition: all 0.3s ease-in-out;
   }
+
   &:active {
     #{$property}: $active;
     transition: all 0.3s ease-in-out;
   }
+}
+
+@mixin link-as-button(
+  $background-color, 
+  $box-shadow-color, 
+  $border-color, 
+  $text-color, 
+  $text-shadow-color
+  )  {
+  background-color: $background-color;
+  box-shadow: inset 1rem -1rem 1rem $box-shadow-color;
+  border: 0.3rem groove $border-color;
+  border-radius: 2rem 1.2rem;
+  color: $text-color;
+  text-shadow: 0.2rem -0.2rem 0.5rem $text-shadow-color;
+  border-radius: 2rem 1.2rem;
 }
