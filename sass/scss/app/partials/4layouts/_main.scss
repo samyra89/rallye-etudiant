@@ -1,0 +1,50 @@
+@use '../1utils/index' as *;
+@use '../2vendors/index' as *;
+@use '../3bases/index' as *;
+
+main,
+h2 {
+  padding: 1rem 0;
+}
+article,
+h3,
+p
+{
+  padding: 0.5rem 0;
+}
+article {
+  flex-direction: column;
+  padding: 1rem 1rem;
+}
+h2 {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+section {
+  padding: 2.5rem 0.5rem 0.5rem 0.5rem;
+  border-left: 0.2rem solid darken($grey, 30%);
+}
+section:nth-child(2) {
+  margin-top: 2rem;
+}
+h3 {
+  position: relative;
+  font-weight: 700;
+}
+h3 span {
+  position: absolute;
+  @extend %flex-center-center;
+
+  @include roundedrectangle(2rem, 2rem, 0.3rem);
+  top: -2rem;
+  left: 0;
+
+  padding: 0.2rem;
+  
+  font-size: 1.2rem;
+  background-color: $orange;
+  border: 0.2rem solid $black;
+}
+p {
+  font-weight: 400;
+}
