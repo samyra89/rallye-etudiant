@@ -1,0 +1,76 @@
+@use '../1utils/index' as *;
+@use '../2vendors/index' as *;
+@use '../3bases/index' as *;
+
+.aside {
+  padding: 2rem 0.5rem 5rem 0.5rem;
+  font-weight: 400;
+  background-color: darken($grey, 35%);
+
+  h4 {
+    margin: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: lighten($grey, 20%);
+
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 2rem;
+  }
+
+  a {
+    position: relative;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+
+    @include link-as-button-2shadows(
+      $orange,
+      darken($orange, 20%),
+      lighten($black,10%),
+      $black,
+      1rem
+    );
+    transition: all 0.3s ease-in-out;
+
+
+    @include link-action(
+      $property: border-color,
+      $link-color: lighten($black,20%),
+      $visited-color: $grey,
+      $hover-color: darken($orange, 15%),
+      $active-color: orange
+    );
+    &:active {
+      background-color: black;
+      box-shadow: inset -0.5rem -0.5rem 0.5rem  lighten($black,15%),
+      inset 0.5rem 0.5rem 0.5rem lighten($black,15%);
+      color: $orange;
+      transition: color 0.3s ease-in-out;
+    }
+    &:active::before {
+      color: $orange;
+      transition: color 0.3s ease-in-out;
+    }
+
+  } 
+  span {
+    display: flex;
+    text-align: end;
+    padding-right:  0.5rem; 
+  };
+
+  &-link-1::before {
+    @include fontawesome-css-content("fa-arrow-right-arrow-left", 1.6rem, $black, transparent, 0.3rem);
+  }
+  &-link-2::before {
+    @include fontawesome-css-content("fa-screwdriver-wrench", 1.6rem, $black, transparent, 0.3rem);
+  }
+  &-link-3::before {
+    @include fontawesome-css-content("fa-flag-checkered", 1.6rem, $black, transparent, 0.3rem);
+  }
+}

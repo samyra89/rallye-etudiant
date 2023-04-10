@@ -14,8 +14,6 @@
   border-radius: $radius;
 }
 
-
-
 @mixin circle($width, $height) {
   @include rectangle($width, $height);
   border-radius: 50%;
@@ -31,44 +29,74 @@
 }
 
 // liens
-@mixin link-action ($property,
-  $link: green,
-  $visited: blue,
-  $hover: purple,
-  $active: orange) {
+@mixin link-action ($property, 
+  $link-color: green,
+  $visited-color: blue,
+  $hover-color: purple,
+  $active-color: orange,
+  ) {
   &:link {
-    #{$property}: $link;
+    #{$property}: $link-color;
     transition: all 0.3s ease-in-out;
   }
 
   &:visited {
-    #{$property}: $visited;
+    #{$property}: $visited-color;
     transition: all 0.3s ease-in-out;
   }
 
   &:hover {
-    #{$property}: $hover ;
+    #{$property}: $hover-color ;
     transition: all 0.3s ease-in-out;
   }
 
   &:active {
-    #{$property}: $active;
+    #{$property}: $active-color;
     transition: all 0.3s ease-in-out;
   }
 }
 
-@mixin link-as-button(
-  $background-color, 
-  $box-shadow-color, 
-  $border-color, 
-  $text-color, 
-  $text-shadow-color
-  )  {
+@mixin link-as-button($background-color,
+  $box-shadow-color,
+  $border-color,
+  $text-color,
+  $text-shadow-color ) {
   background-color: $background-color;
   box-shadow: inset 1rem -1rem 1rem $box-shadow-color;
   border: 0.3rem groove $border-color;
   border-radius: 2rem 1.2rem;
   color: $text-color;
   text-shadow: 0.2rem -0.2rem 0.5rem $text-shadow-color;
-  border-radius: 2rem 1.2rem;
+}
+
+@mixin before-after-position($top: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin fontawesome-css-content($class-font, $font-size, $color: black, $background, $padding) {
+  padding: $padding;
+  font-family: "Font Awesome 6 Free";
+  @extend .#{$class-font};
+  font-size: $font-size;
+  font-weight: 900;
+  color: $color;
+  background-color: $background;
+}
+
+@mixin link-as-button-2shadows(
+  $background-color,
+  $box-shadow-color,
+  $border-color,
+  $text-color,
+  $border-radius) {
+  background-color: $background-color;
+  box-shadow:
+    inset -0.5rem -0.5rem 0.5rem $box-shadow-color,
+    inset 0.5rem 0.5rem 0.5rem $box-shadow-color;
+  border: 0.3rem inset $border-color;
+  border-radius: $border-radius;
+  color: $text-color;
+  transition: all 0.3s ease-in-out;
 }
