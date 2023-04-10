@@ -15,11 +15,8 @@
     color: lighten($grey, 20%);
 
   }
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    row-gap: 2rem;
+  li {
+    margin-top: 4rem;
   }
 
   a {
