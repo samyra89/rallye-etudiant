@@ -70,10 +70,10 @@
     text-align: center;
     transition: all 0.3s ease-in-out;
     @include link-action($property: border-color,
-      $link: rgba($color: darken($grey, 70%), $alpha: 0.4),
-      $visited: $grey,
-      $hover: darken($orange, 15%),
-      $active: darken($grey, 70%))
+      $link-color: rgba($color: darken($grey, 70%), $alpha: 0.4),
+      $visited-color: $grey,
+      $hover-color: darken($orange, 15%),
+      $active-color: darken($grey, 70%))
   }
 }
 
