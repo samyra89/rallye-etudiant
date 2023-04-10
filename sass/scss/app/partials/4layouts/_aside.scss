@@ -3,12 +3,13 @@
 @use '../3bases/index' as *;
 
 .aside {
+  margin: 2rem 0;
   padding: 2rem 0.5rem 5rem 0.5rem;
   font-weight: 400;
   background-color: darken($grey, 35%);
 
   h4 {
-    margin: 1.5rem;
+    margin: 1.5rem 0;
     font-weight: 700;
     text-align: center;
     color: lighten($grey, 20%);
