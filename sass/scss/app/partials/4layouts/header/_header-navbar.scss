@@ -2,7 +2,7 @@
 @use '../../2vendors/index' as *;
 @use '../../3bases/index' as *;
 
-
+/*------header-navbar--------------*/
 .header {
   &-nav {
     position: relative;
@@ -46,6 +46,7 @@
       left: 0;
       @include roundedrectangle(100%, $hamburger-height, $hamburger-radius);
       background-color: $black;
+      transition: all 0.3s ease-in-out
     }
     &:after {
       @extend %before-after;
@@ -53,13 +54,15 @@
       left: 0;
       @include roundedrectangle(100%, $hamburger-height, $hamburger-radius);
       background-color: $black;
+      transition: all 0.3s ease-in-out
     } 
   }
   &-textburger {
     font-size: $burger-text;
     padding: $burger-pad-top $texburger-pad-horizontal $burger-pad-bottom $texburger-pad-horizontal;
     text-transform: uppercase;
-    opacity: 1; 
+    opacity: 1;
+    transition: all 0.3s ease-in-out
   }  
 }
 

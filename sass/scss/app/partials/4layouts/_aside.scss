@@ -1,17 +1,17 @@
 @use '../1utils/index' as *;
 @use '../2vendors/index' as *;
 @use '../3bases/index' as *;
-
+/*ASIDE-------------------*/
 .aside {
   margin: 2rem 0;
   padding: 2rem 0.5rem 5rem 0.5rem;
-  font-weight: 400;
   background-color: darken($grey, 35%);
+  font-weight: 400;
 
   h4 {
     margin: 1.5rem 0;
-    font-weight: 700;
     text-align: center;
+    font-weight: 700;
     color: lighten($grey, 20%);
 
   }
@@ -58,8 +58,8 @@
   } 
   span {
     display: flex;
-    text-align: end;
     padding-right:  0.5rem; 
+    text-align: end;
   };
 
   &-link-1::before {

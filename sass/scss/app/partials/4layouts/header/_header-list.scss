@@ -2,6 +2,7 @@
 @use '../../2vendors/index' as *;
 @use '../../3bases/index' as *;
 
+/*------header-list--------------*/
 .header {
   &-list-wrapper {
     position: absolute;
@@ -30,10 +31,10 @@
 
   &-list {
     position: relative;
-    rotate: 320deg;
     @extend %flex-center-center;
     flex-direction: column;
     @include circle($list-width, $list-heigth);
+    rotate: 320deg;
 
     background: radial-gradient(ellipse at center, $grey 0%, darken($color: $grey, $amount: 10%) 50%, $black 70%, $black 100%);
     border: 2rem groove $black;
@@ -54,7 +55,6 @@
 
     &:nth-child(2) {
       margin: 0.5rem 0;
-      z-index: 1000;
     }
   }
 

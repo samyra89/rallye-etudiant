@@ -2,11 +2,12 @@
 @use '../../2vendors/index' as *;
 @use '../../3bases/index' as *;
 
+/*------header-presentation--------------*/
 .header {
   &-presentation {
     position: relative;
-    background-color: lighten($grey, 10%);
     padding: 1rem;
+    background-color: lighten($grey, 10%);
   }
 
   &-major {
@@ -14,24 +15,24 @@
   }
 
   &-title {
-    text-transform: uppercase;
     font-size: $h1;
+    text-transform: uppercase;
   }
 
   &-description {
-    font-weight: 700;
     padding: 0.7rem 0;
+    font-weight: 700;
   }
 
   &-business {
     padding: 0.2rem;
+    background-color: white;
     border: 0.2rem solid darken($grey, 30%);
     border-radius: 0.5rem;
-    background-color: white;
     & picture {
+      display: block;
       width: 100%;
       height: 100%;
-      display: block;
     }
 
     & source,
@@ -42,14 +43,14 @@
     & figcaption {
       display: block;
       margin-top: 0.2rem;
+      border-top: 0.1rem solid darken($grey, 10%);
       font-size: 0.8 * $fs-xs;
       font-weight: 400;
-      border-top: 0.1rem solid darken($grey, 10%);
       
     }
     & figcaption p:nth-child(2) {
-      font-size: 0.5 * $fs-xs;
       line-height: 1rem;
+      font-size: 0.5 * $fs-xs;
     }
   }
   &-chapter {

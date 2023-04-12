@@ -2,6 +2,7 @@
 @use '../2vendors/index' as *;
 @use '../3bases/index' as *;
 
+/*MAIN-----------------------*/
 main,
 h2 {
   padding: 1rem 0;
@@ -34,17 +35,14 @@ h3 {
 }
 h3 span {
   position: absolute;
-  @extend %flex-center-center;
-
-  @include roundedrectangle(2rem, 2rem, 0.3rem);
   top: -2rem;
   left: 0;
-
+  @extend %flex-center-center;
   padding: 0.2rem;
-  
-  font-size: 1.2rem;
+  @include roundedrectangle(2rem, 2rem, 0.3rem);
   background-color: $orange;
-  border: 0.2rem solid $black;
+  border: 0.2rem solid $black;  
+  font-size: 1.2rem;
 }
 p {
   font-weight: 400;

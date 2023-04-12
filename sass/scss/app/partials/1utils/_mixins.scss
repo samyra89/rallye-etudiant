@@ -4,6 +4,18 @@
   font-weight: $weight;
 }
 
+//insert fontawesome in css
+@mixin fontawesome-css-content($class-font, $font-size, $color: black, $background, $padding) {
+  padding: $padding;
+  font-family: "Font Awesome 6 Free";
+  @extend .#{$class-font};
+  font-size: $font-size;
+  font-weight: 900;
+  color: $color;
+  background-color: $background;
+}
+
+//geometric shapes
 @mixin rectangle($width, $height) {
   width: $width;
   height: $height;
@@ -28,63 +40,56 @@
   scale: $scale
 }
 
-// liens
+// effects on links
 @mixin link-action ($property, 
-  $link-color: green,
-  $visited-color: blue,
-  $hover-color: purple,
-  $active-color: orange,
-  ) {
+$link-color: green,
+$visited-color: blue,
+$hover-color: purple,
+$active-color: orange,
+) {
   &:link {
     #{$property}: $link-color;
     transition: all 0.3s ease-in-out;
   }
-
+  
   &:visited {
     #{$property}: $visited-color;
     transition: all 0.3s ease-in-out;
   }
-
+  
   &:hover {
     #{$property}: $hover-color ;
     transition: all 0.3s ease-in-out;
   }
-
+  
   &:active {
     #{$property}: $active-color;
     transition: all 0.3s ease-in-out;
   }
 }
 
-@mixin link-as-button($background-color,
-  $box-shadow-color,
-  $border-color,
-  $text-color,
-  $text-shadow-color ) {
-  background-color: $background-color;
-  box-shadow: inset 1rem -1rem 1rem $box-shadow-color;
-  border: 0.3rem groove $border-color;
-  border-radius: 2rem 1.2rem;
-  color: $text-color;
-  text-shadow: 0.2rem -0.2rem 0.5rem $text-shadow-color;
-}
-
+//block positions
 @mixin before-after-position($top: 0, $left: 0) {
   position: absolute;
   top: $top;
   left: $left;
 }
 
-@mixin fontawesome-css-content($class-font, $font-size, $color: black, $background, $padding) {
-  padding: $padding;
-  font-family: "Font Awesome 6 Free";
-  @extend .#{$class-font};
-  font-size: $font-size;
-  font-weight: 900;
-  color: $color;
-  background-color: $background;
+//geometric shapes of links header-list
+@mixin link-as-button($background-color,
+$box-shadow-color,
+$border-color,
+$text-color,
+$text-shadow-color ) {
+  background-color: $background-color;
+  box-shadow: inset 1rem -1rem 1rem $box-shadow-color;
+  border: 0.3rem groove $border-color;
+  border-radius: 2rem 1.2rem;
+  text-shadow: 0.2rem -0.2rem 0.5rem $text-shadow-color;
+  color: $text-color;
 }
 
+//geometric shapes of links aside
 @mixin link-as-button-2shadows(
   $background-color,
   $box-shadow-color,
@@ -100,3 +105,4 @@
   color: $text-color;
   transition: all 0.3s ease-in-out;
 }
+
