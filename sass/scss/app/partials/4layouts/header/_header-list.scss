@@ -37,7 +37,7 @@
     rotate: 320deg;
 
     background: radial-gradient(ellipse at center, $grey 0%, darken($color: $grey, $amount: 10%) 50%, $black 70%, $black 100%);
-    border: 2rem groove $black;
+    border: 2rem solid $black;
     font-size: $fs-xs;
     transition: all 0.4s linear;
 
@@ -61,24 +61,25 @@
   &-link {
     display: block;
     padding: 0.6rem 1rem;
-    @include link-as-button($grey,
-      darken($grey, 20%),
-      rgba($color: darken($grey, 70%), $alpha: 0.4),
-      darken($color: $grey, $amount: 60%),
-      darken($grey, 50%));
+    @include link-as-button(
+      $orange,  
+      darken($orange, 15%),
+      rgba($color: darken($orange, 70%), $alpha: 0.4),
+      $black,
+      lighten($orange, 30%));
     font-size: 1.1rem;
     text-align: center;
     transition: all 0.3s ease-in-out;
     @include link-action($property: border-color,
-      $link-color: rgba($color: darken($grey, 70%), $alpha: 0.4),
-      $visited-color: $grey,
-      $hover-color: darken($orange, 15%),
-      $active-color: darken($grey, 70%))
+      $link-color: darken($orange,15%),
+      $visited-color: lighten($orange, 10%),
+      $hover-color: darken($orange, 30%),
+      $active-color: darken($orange, 40%))
   }
 }
 
 #burger:checked {
-  &~.header-list-wrapper {
+  & ~ .header-list-wrapper {
     left: 0;
     transition: all 0.4s linear;
 
