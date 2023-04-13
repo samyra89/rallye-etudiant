@@ -34,22 +34,35 @@
       1rem
     );
     transition: all 0.3s ease-in-out;
-
-
     @include link-action(
       $property: border-color,
-      $link-color: lighten($black,20%),
-      $visited-color: $grey,
+      $link-color: $orange,
+      $visited-color: lighten($orange, 10%),
       $hover-color: darken($orange, 15%),
       $active-color: orange
     );
     &:active {
       background-color: black;
-      box-shadow: inset -0.5rem -0.5rem 0.5rem  lighten($black,15%),
-      inset 0.5rem 0.5rem 0.5rem lighten($black,15%);
+      box-shadow: inset -0.5rem -0.5rem 0.5rem  lighten($black,05%),
+      inset 0.5rem 0.5rem 0.5rem lighten($black,05%);
       color: $orange;
-      transition: color 0.3s ease-in-out;
+      
     }
+
+    //@include link-action(
+    //  $property: border-color,
+    //  $link-color: lighten($black,20%),
+    //  $visited-color: $grey,
+    //  $hover-color: darken($orange, 15%),
+    //  $active-color: orange
+    //);
+    //&:active {
+    //  background-color: black;
+    //  box-shadow: inset -0.5rem -0.5rem 0.5rem  lighten($black,15%),
+    //  inset 0.5rem 0.5rem 0.5rem lighten($black,15%);
+    //  color: $orange;
+    //  transition: color 0.3s ease-in-out;
+    //}
     &:active::before {
       color: $orange;
       transition: color 0.3s ease-in-out;
