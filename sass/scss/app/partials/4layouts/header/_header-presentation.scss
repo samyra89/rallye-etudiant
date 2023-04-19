@@ -48,9 +48,12 @@
       font-weight: 400;
       
     }
-    & figcaption p:nth-child(2) {
+    & figcaption p {
+      padding: 0;
+    }
+    & figcaption p:last-child {      
       line-height: 1rem;
-      font-size: 0.5 * $fs-xs;
+      font-size: 0.7 * $fs-xs;
     }
   }
   &-chapter {
