@@ -10,7 +10,7 @@ $fs-xs: 1.2rem;
 
 
 //font nav bar
-$nav-fs: 1.2rem;
+$nav-fs: $fs-xs;
 $nav-ff: $roboto;
 $nav-fw: 900;
 $nav-inset: -0.3rem;
@@ -63,6 +63,6 @@ $list-heigth: $list-width;
 $screen-width-xs: 'min-width:200px';
 
 // header-presentation
-$h1: 1.1rem;
+$h1: $fs-xs;
 
 
