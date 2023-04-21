@@ -23,9 +23,9 @@
   a {
     position: relative;
     display: flex;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items: center;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 1rem;
 
     @include link-as-button-2shadows(
       $orange,
